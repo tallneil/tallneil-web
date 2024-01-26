@@ -6,7 +6,7 @@ var r = document.querySelector(':root');
 
 
 const pane = new Pane({
-    title: 'GUI',
+    title: 'Experiment',
     expanded: true,
 });
 
@@ -24,7 +24,7 @@ function makePane() {
 }
 
 function updateColor(c) {
-    r.style.setProperty('--accent', c.value);
+    r.style.setProperty('--color-accent', c.value);
 }
 
 document.addEventListener('DOMContentLoaded', function () {

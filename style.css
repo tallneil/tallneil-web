@@ -1,5 +1,43 @@
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("fonts/OpenSauceSans-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
 :root {
-  --accent: #5667FF;
+  --color-bg: #080808;
+  --color-type: #ffffff;
+  --color-accent: #5667FF;
 }
 
 *, *::before, *::after {
@@ -10,55 +48,55 @@
     outline: 0;
 }
   
-  *::selection {
-    background: #ffffff;
-    color: #000000;
-  }
+*::selection {
+  background: var(--color-type);
+  color: var(--color-bg);
+}
 
-  html {
-    font-size: 16px; /* 1 rem */ 
-  }
-  
-  body {
-    width: 100vw;
-    height: 100vh;
-    background: #080808;
-    color: #ffffff;
-    font-family: "Pilat Wide", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 0.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-  }
-  
-  
-  .main {
-    display: grid;
-    width: 100vw;
-    height: 100%;
-    padding: 40px;
-    transition: height 0.4s ease-out;
+html {
+  font-size: 16px; /* 1 rem */ 
+}
 
-  }
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-type);
+  font-family: "Open Sauce Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
 
-  svg.wordmark { 
-    width: 100%;
-    height: auto;
-    path {
-      fill: var(--accent);
-    }
+a {
+  color: var(--color-type);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+
+.main {
+  display: grid;
+  width: 100vw;
+  height: 100%;
+  padding: 40px;
+  transition: height 0.4s ease-out;
+
+}
+
+svg.wordmark { 
+  width: 100%;
+  height: auto;
+  path {
+    fill: var(--color-accent);
   }
-  
-  .m2 {
-    text-align: center;
-  }
+}
+
+.m2 {
+  text-align: center;
+}
 
