@@ -24,7 +24,7 @@
   body {
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: #080808;
     color: #ffffff;
     font-family: "Pilat Wide", sans-serif;
     font-size: 16px;
@@ -50,6 +50,14 @@
     padding: 40px;
     transition: height 0.4s ease-out;
 
+  }
+
+  svg.wordmark { 
+    width: 100%;
+    height: auto;
+    path {
+      fill: #5667FF;
+    }
   }
   
   .m2 {
