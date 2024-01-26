@@ -1,3 +1,38 @@
+/* https://tweakpane.github.io/docs/ */
+import {Pane} from 'https://cdn.jsdelivr.net/npm/tweakpane@4.0.3/dist/tweakpane.min.js';
+const pane = new Pane();
+
+
+const PARAMS = {
+    percentage: 50,
+    theme: 'dark',
+  };
+  
+function makePane() {
+    pane.addBinding(PARAMS, 'percentage', {min: 0, max: 100, step: 1});
+  
+    // `options`: list
+    pane.addBinding(PARAMS, 'theme',{options: {Dark: 'dark', Light: 'light'}});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var n = 0; // tracks current colorway 
 var ripples = 0; // temp
 var gui;
@@ -54,7 +89,9 @@ function changeColor(arr) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    makeControls();
+    //makeControls();
+
+    makePane();
 });
 
 
