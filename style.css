@@ -78,7 +78,8 @@ body {
   color: var(--color-type);
   font-family: "Open Sauce Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 140%;
   margin: 0;
   padding: 0;
 }
@@ -87,14 +88,9 @@ a {
   color: var(--color-type);
   text-decoration: none;
   cursor: pointer;
-  padding: 0.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
 }
 
-
 .main {
-  display: grid;
   width: 100%;
   height: 100%;
   padding: 40px;
@@ -102,15 +98,60 @@ a {
   margin: 0 auto;
 }
 
-svg.wordmark { 
-  width: 100%;
-  height: auto;
-  path {
-    fill: var(--color-accent);
+.m1 {
+  margin-bottom: 8rem;
+
+  svg { 
+    width: 100%;
+    height: auto;
+    path {
+      fill: var(--color-accent);
+    }
   }
 }
 
+
+
 .m2 {
   text-align: center;
+  width: 40%;
+  margin: 0 auto 20rem auto;
+
+  .sentence {
+    font-size: 1.3rem;
+    line-height: 140%;
+    margin-bottom: 2rem;
+  }
+
+  .buttons-1 {
+    display: flex; 
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .buttons-2 span {
+    opacity: 0.8;
+  }
 }
+
+a.btn {
+  padding: 4px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  span {
+    opacity: 0.5;
+    font-weight: 300;
+  }
+}
+
+
+
 
