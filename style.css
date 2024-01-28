@@ -37,14 +37,29 @@
 }
 
 
-/* gui */
-.tp-dfwv {
-  left: 8px;
+
+.tp-dfwv { /* tweakpane gui */
+  left: 50%;
+  transform: translateX(-50%);
+
+  select.tp-lstv_s {
+    background-color: var(--in-bg);
+    color: var(--btn-bg);
+
+    &:hover {
+      background-color: var(--in-bg-h);
+    }
+  }
+
+  div.tp-lstv_m svg path {
+    fill: var(--btn-bg);
+  }
 }
 
 
 
 :root {
+  --spacer: 24px;
   --color-bg: #080808;
   --color-type: #ffffff;
   --color-accent: #5667FF;
@@ -52,14 +67,12 @@
 
 
 
-
-
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
   
 *::selection {
@@ -93,13 +106,14 @@ a {
 .main {
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: var(--spacer);
   max-width: 1920px;
   margin: 0 auto;
 }
 
 .m1 {
-  margin-bottom: 8rem;
+  margin-top: calc(var(--spacer) * 3);
+  margin-bottom: calc(var(--spacer) * 6);
 
   svg { 
     width: 100%;
@@ -110,24 +124,24 @@ a {
   }
 }
 
-
-
 .m2 {
   text-align: center;
-  width: 40%;
-  margin: 0 auto 20rem auto;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: calc(var(--spacer) * 6);
 
-  .sentence {
+  h1 {
     font-size: 1.3rem;
     line-height: 140%;
-    margin-bottom: 2rem;
+    font-weight: 400;
+    margin-bottom: var(--spacer);
   }
 
   .buttons-1 {
     display: flex; 
     justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    gap: calc(var(--spacer) / 3);
+    margin-bottom: calc(var(--spacer) / 2);
   }
 
   .buttons-2 span {
@@ -152,6 +166,81 @@ a.btn {
   }
 }
 
+.m3 {
+  width: 60%;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 0 auto;
+  margin-bottom: calc(var(--spacer) * 10);
+  padding: var(--spacer);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
+  
+  h2 {
+    text-align: center; 
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: var(--spacer) 0;
+  }
+}
 
+.card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.2s ease;
+  padding: var(--spacer);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .r1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacer);
+
+    .left {
+      display: flex;
+      gap: calc(var(--spacer) / 3);
+      align-items: center;
+
+      .logo {
+        width: 28px;
+        height: auto;
+      }
+      .year { 
+        opacity: 0.5;
+        font-weight: 300;
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: calc(var(--spacer) / 3);
+
+      a.btn {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .r2 {
+    opacity: 0.8;
+    font-size: 0.8rem;
+    line-height: 140%;
+    font-weight: 300;
+  }
+}
+
+
+
+
+.footer {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  padding-bottom: var(--spacer);
+}
 
 
