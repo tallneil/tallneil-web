@@ -126,7 +126,7 @@ a {
 
 .m2 {
   text-align: center;
-  width: 50%;
+  width: 720px;
   margin: 0 auto;
   margin-bottom: calc(var(--spacer) * 6);
 
@@ -167,7 +167,7 @@ a.btn {
 }
 
 .m3 {
-  width: 60%;
+  width: 720px;
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.02);
   margin: 0 auto;
@@ -244,3 +244,7 @@ a.btn {
 }
 
 
+
+@media(max-width: 800px) {
+
+}
