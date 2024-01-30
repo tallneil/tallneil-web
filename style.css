@@ -115,8 +115,8 @@ a {
 }
 
 .m1 {
-  margin-top: calc(var(--spacer) * 3);
-  margin-bottom: calc(var(--spacer) * 6);
+  margin-top: calc(var(--spacer) * 5);
+  margin-bottom: calc(var(--spacer) * 5);
 
   svg { 
     width: 100%;

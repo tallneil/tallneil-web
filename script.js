@@ -13,6 +13,7 @@ const pane = new Pane({
 const levers = {
     theme: 'Dusk',
     accent: '#5667FF',
+    spacing: 24,
   };
   
 function makePane() {
@@ -21,6 +22,9 @@ function makePane() {
     );
     pane.addBinding(levers, 'accent', {view: 'color'})
         .on('change', newValue => {setVar('--color-accent', newValue.value)}
+    );
+    pane.addBinding(levers, 'spacing', {min: 16, max: 40, step: 1})
+        .on('change', newValue => {setVar('--spacer', newValue.value + "px")}
     );
 }
 
