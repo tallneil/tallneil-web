@@ -16,13 +16,34 @@ const levers = {
   };
   
 function makePane() {
-    pane.addBinding(levers, 'theme',{options: {Dusk: 'Dusk', Light: 'Light'}});
-    pane.addBinding(levers, 'color', {view: 'color',}).on('change',  newValue => {updateColor(newValue)});
-    newValue => {changeColor(0, newValue)}
+    pane.addBinding(levers, 'theme', {options: {Dusk: 'Dusk', Zap: 'Zap', Grass: 'Grass'}})
+        .on('change', newValue => {setTheme(newValue.value)}
+    );
+    pane.addBinding(levers, 'color', {view: 'color'})
+        .on('change', newValue => {setVar('--color-accent', newValue.value)}
+    );
 }
 
-function updateColor(c) {
-    r.style.setProperty('--color-accent', c.value);
+function setTheme(v) {
+    if (v == 'Dusk') {
+        setThemeVars('#080808', '#ffffff', "#5667FF");
+    } else if (v == 'Zap') { 
+        setThemeVars('#DBFF00', '#000000', "#000000");
+    } else if (v == 'Grass') {
+        setThemeVars('#BFEFC1', '#000000', "#00AE11");
+    } else { 
+        setThemeVars('#080808', '#ffffff', "#5667FF");
+    }
+}
+
+function setThemeVars(bg, fg, a) {
+    r.style.setProperty('--color-bg', bg);
+    r.style.setProperty('--color-fg', fg);
+    r.style.setProperty('--color-accent', a);
+}
+
+function setVar(v, c) {
+    r.style.setProperty(v, c);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
