@@ -12,14 +12,14 @@ const pane = new Pane({
 
 const levers = {
     theme: 'Dusk',
-    color: '#5667FF',
+    accent: '#5667FF',
   };
   
 function makePane() {
     pane.addBinding(levers, 'theme', {options: {Dusk: 'Dusk', Zap: 'Zap', Grass: 'Grass'}})
         .on('change', newValue => {setTheme(newValue.value)}
     );
-    pane.addBinding(levers, 'color', {view: 'color'})
+    pane.addBinding(levers, 'accent', {view: 'color'})
         .on('change', newValue => {setVar('--color-accent', newValue.value)}
     );
 }
@@ -40,6 +40,8 @@ function setThemeVars(bg, fg, a) {
     r.style.setProperty('--color-bg', bg);
     r.style.setProperty('--color-fg', fg);
     r.style.setProperty('--color-accent', a);
+    levers.accent = a;
+    pane.refresh();
 }
 
 function setVar(v, c) {
