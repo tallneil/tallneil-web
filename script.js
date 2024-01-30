@@ -26,28 +26,38 @@ function makePane() {
 
 function setTheme(v) {
     if (v == 'Dusk') {
-        setThemeVars('#080808', '#ffffff', "#5667FF");
+        setThemeVars('#080808', '#ffffff', "#5667FF", 0);
         $(".wordmark").addClass("hidden");
         $("#w1").removeClass("hidden");
     } else if (v == 'Zap') { 
-        setThemeVars('#DBFF00', '#000000', "#000000");
+        setThemeVars('#DBFF00', '#000000', "#000000", 1);
         $(".wordmark").addClass("hidden");
         $("#w2").removeClass("hidden");
     } else if (v == 'Grass') {
-        setThemeVars('#BFEFC1', '#000000', "#00AE11");
+        setThemeVars('#DFF6F0', '#000000', "#00AE11", 1);
         $(".wordmark").addClass("hidden");
         $("#w3").removeClass("hidden");
     } else { 
-        setThemeVars('#080808', '#ffffff', "#5667FF");
+        setThemeVars('#080808', '#ffffff', "#5667FF", 0);
     }
 }
 
-function setThemeVars(bg, fg, a) {
+function setThemeVars(bg, fg, a, light) {
     r.style.setProperty('--color-bg', bg);
     r.style.setProperty('--color-fg', fg);
     r.style.setProperty('--color-accent', a);
     levers.accent = a;
     pane.refresh();
+
+    if (light) {
+        r.style.setProperty('--color-bg-a', 'rgba(0, 0, 0, 0.02)');
+        r.style.setProperty('--color-bg-a-h', 'rgba(0, 0, 0, 0.04)');
+        r.style.setProperty('--color-fg-a', 'rgba(0, 0, 0, 0.2)');
+    } else {
+        r.style.setProperty('--color-bg-a', 'rgba(255, 255, 255, 0.02)');
+        r.style.setProperty('--color-bg-a-h', 'rgba(255, 255, 255, 0.04)');
+        r.style.setProperty('--color-fg-a', 'rgba(255, 255, 255, 0.2)');
+    }
 }
 
 function setVar(v, c) {

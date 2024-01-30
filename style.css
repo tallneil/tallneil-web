@@ -61,7 +61,10 @@
 :root {
   --spacer: 24px;
   --color-bg: #080808;
+  --color-bg-a: rgba(255, 255, 255, 0.02);
+  --color-bg-a-h: rgba(255, 255, 255, 0.04);
   --color-fg: #ffffff;
+  --color-fg-a: rgba(255, 255, 255, 0.2);
   --color-accent: #5667FF;
 }
 
@@ -158,7 +161,7 @@ a {
 
 a.btn {
   padding: 4px 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-fg-a);
   border-radius: 4px;
   transition: background 0.2s ease, color 0.2s ease;
 
@@ -176,7 +179,7 @@ a.btn {
 .m3 {
   width: 720px;
   border-radius: 32px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-bg-a);
   margin: 0 auto;
   margin-bottom: calc(var(--spacer) * 10);
   padding: var(--spacer);
@@ -194,12 +197,12 @@ a.btn {
 
 .card {
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-bg-a);
   transition: background 0.2s ease;
   padding: var(--spacer);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--color-bg-a-h);
   }
 
   .r1 {
