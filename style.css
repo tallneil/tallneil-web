@@ -65,7 +65,7 @@
   --color-bg-a-h: rgba(255, 255, 255, 0.04);
   --color-fg: #ffffff;
   --color-fg-a: rgba(255, 255, 255, 0.2);
-  --color-accent: #5667FF;
+  --color-accent: #3AFF95;
 }
 
 
@@ -189,7 +189,7 @@ a.btn {
   
   h2 {
     text-align: center; 
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.4rem;
     margin: var(--spacer) 0;
   }

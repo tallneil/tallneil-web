@@ -11,13 +11,13 @@ const pane = new Pane({
 });
 
 const levers = {
-    theme: 'Dusk',
-    accent: '#5667FF',
+    theme: 'Mint',
+    accent: '#3AFF95',
     spacing: 24,
   };
   
 function makePane() {
-    pane.addBinding(levers, 'theme', {options: {Dusk: 'Dusk', Zap: 'Zap', Grass: 'Grass'}})
+    pane.addBinding(levers, 'theme', {options: {Mint: 'Mint', Zap: 'Zap', Cloud: 'Cloud'}})
         .on('change', newValue => {setTheme(newValue.value)}
     );
     pane.addBinding(levers, 'accent', {view: 'color'})
@@ -29,16 +29,16 @@ function makePane() {
 }
 
 function setTheme(v) {
-    if (v == 'Dusk') {
-        setThemeVars('#080808', '#ffffff', "#5667FF", 0);
+    if (v == 'Mint') {
+        setThemeVars('#080808', '#ffffff', "#3AFF95", 0);
         $(".wordmark").addClass("hidden");
         $("#w1").removeClass("hidden");
     } else if (v == 'Zap') { 
         setThemeVars('#DBFF00', '#000000', "#000000", 1);
         $(".wordmark").addClass("hidden");
         $("#w2").removeClass("hidden");
-    } else if (v == 'Grass') {
-        setThemeVars('#DFF6F0', '#000000', "#00AE11", 1);
+    } else if (v == 'Cloud') {
+        setThemeVars('#C4D5FF', '#000000', "#001AFF", 1);
         $(".wordmark").addClass("hidden");
         $("#w3").removeClass("hidden");
     } else { 
