@@ -27,10 +27,16 @@ function makePane() {
 function setTheme(v) {
     if (v == 'Dusk') {
         setThemeVars('#080808', '#ffffff', "#5667FF");
+        $(".wordmark").addClass("hidden");
+        $("#w1").removeClass("hidden");
     } else if (v == 'Zap') { 
         setThemeVars('#DBFF00', '#000000', "#000000");
+        $(".wordmark").addClass("hidden");
+        $("#w2").removeClass("hidden");
     } else if (v == 'Grass') {
         setThemeVars('#BFEFC1', '#000000', "#00AE11");
+        $(".wordmark").addClass("hidden");
+        $("#w3").removeClass("hidden");
     } else { 
         setThemeVars('#080808', '#ffffff', "#5667FF");
     }
