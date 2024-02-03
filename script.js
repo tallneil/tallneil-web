@@ -23,9 +23,9 @@ function makePane() {
     pane.addBinding(levers, 'accent', {view: 'color'})
         .on('change', newValue => {setVar('--color-accent', newValue.value)}
     );
-    pane.addBinding(levers, 'spacing', {min: 16, max: 40, step: 1})
-        .on('change', newValue => {setVar('--spacer', newValue.value + "px")}
-    );
+    // pane.addBinding(levers, 'spacing', {min: 16, max: 40, step: 1})
+    //     .on('change', newValue => {setVar('--spacer', newValue.value + "px")}
+    // );
 }
 
 function setTheme(v) {
