@@ -191,7 +191,7 @@ a.btn {
     grid-column-end: span 2;
     text-align: center; 
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: var(--spacer) 0;
   }
 }
