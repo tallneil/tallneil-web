@@ -177,8 +177,8 @@ a.btn {
 }
 
 .m3 {
-  width: 720px;
-  border-radius: 32px;
+  width: 480px;
+  border-radius: 24px;
   background: var(--color-bg-a);
   margin: 0 auto;
   margin-bottom: calc(var(--spacer) * 10);
@@ -200,6 +200,9 @@ a.btn {
   background: var(--color-bg-a);
   transition: background 0.2s ease;
   padding: var(--spacer);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
 
   &:hover {
     background: var(--color-bg-a-h);
@@ -207,39 +210,34 @@ a.btn {
 
   .r1 {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--spacer);
+    gap: calc(var(--spacer) / 3);
+    align-items: center;
 
-    .left {
-      display: flex;
-      gap: calc(var(--spacer) / 3);
-      align-items: center;
-
-      .logo {
-        width: 28px;
-        height: auto;
-      }
-      .year { 
-        opacity: 0.5;
-        font-weight: 300;
-      }
+    .logo {
+      width: 28px;
+      height: auto;
     }
-
-    .right {
-      display: flex;
-      gap: calc(var(--spacer) / 3);
-
-      a.btn {
-        font-size: 0.8rem;
-      }
+    .year { 
+      opacity: 0.5;
+      font-weight: 300;
     }
   }
 
   .r2 {
+    width: 90%;
     opacity: 0.8;
     font-size: 0.8rem;
-    line-height: 140%;
+    line-height: 150%;
     font-weight: 300;
+  }
+
+  .r3 {
+    display: flex;
+    gap: calc(var(--spacer) / 3);
+
+    a.btn {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -255,6 +253,22 @@ a.btn {
 
 
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
+  .m2 {
+    width: 100%;
+    padding: 8px;
+  }
 
+  .m3 {
+    width: 100%;
+
+    .card .r1 {
+      display: block;
+      .left {
+        margin-bottom: calc(var(--spacer) / 2);
+
+
+      }
+    }
+  }
 }
