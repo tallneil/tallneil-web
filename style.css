@@ -304,6 +304,12 @@ a.btn {
   html {
     font-size: 14px; 
   }
+  .m1 {
+    margin-top: calc(var(--spacer) * 8);
+  }
+}
+
+@media (max-width: 350px) {
   .tp-dfwv {
     display: none;
   }
