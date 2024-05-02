@@ -3,8 +3,6 @@ import {Pane} from 'https://cdn.jsdelivr.net/npm/tweakpane@4.0.3/dist/tweakpane.
 
 var r = document.querySelector(':root');
 
-
-
 const pane = new Pane({
     title: 'Experiment',
     expanded: true,
