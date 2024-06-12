@@ -1,5 +1,7 @@
 # tallneil.io
 
+Personal website for Neil Shankar (@tallneil)
+
 ## Development
 
-`python3 -m http.server`
+Github pages site built in vanilla HTML, CSS, and JS. To run locally, `python3 -m http.server`
