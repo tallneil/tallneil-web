@@ -189,7 +189,7 @@ a.btn {
   border-radius: 24px;
   background: var(--color-bg-a);
   margin: 0 auto;
-  margin-bottom: calc(var(--spacer) * 10);
+  margin-bottom: calc(var(--spacer) * 4);
   padding: var(--spacer);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -258,6 +258,7 @@ a.btn {
   text-align: center;
   opacity: 0.8;
   font-size: 0.8rem;
+  margin-top: calc(var(--spacer) * 10);
   padding-bottom: var(--spacer);
 
   div.social {
@@ -292,9 +293,9 @@ a.btn {
 @media (max-width: 1200px) {
   .m3 {
     width: 752px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     h2 {
-      grid-column-end: span 2;
+      grid-column-end: unset;
     }
   }
 }
