@@ -1,2 +1,8 @@
+# Ignore .DS_Store
 .DS_Store
-/node_modules
+
+# Ignore Next.js build directory
+.next/
+
+# Ignore node_modules directory in Node.js projects
+node_modules/
